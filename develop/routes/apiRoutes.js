@@ -22,7 +22,7 @@ router.post("/notes", function(req, res) {
 //use removeNote method in the store object
 //your code here
 
-router.delete("/notes", function(req, res) {
+router.delete("/notes/:id", function(req, res) {
     store
     .removeNote(req.params.id)
     .then((notes) => res.json(notes))
